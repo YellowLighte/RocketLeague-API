@@ -20,7 +20,7 @@ public class Player {
     private String system;
 
     @JsonIgnore
-    @OneToOne(mappedBy = "player_stats")
+    @OneToOne(mappedBy = "player")
     private Stats stats;
 
     @ManyToOne

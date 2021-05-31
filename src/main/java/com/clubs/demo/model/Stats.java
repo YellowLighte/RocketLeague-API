@@ -23,7 +23,8 @@ public class Stats {
     private int assists;
 
     @JsonIgnore
-    @OneToOne(mappedBy = "player")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "player_id", referencedColumnName = "id")
     private Player player;
 
 

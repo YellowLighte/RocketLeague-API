@@ -24,10 +24,10 @@ public class Club {
     @Column
     private String secondaryColor;
 
-    @OneToMany(mappedBy = "club_users")
+    @OneToMany(mappedBy = "club")
     private List<User> users;
 
-    @OneToMany(mappedBy = "club_players")
+    @OneToMany(mappedBy = "club")
     private List<Player> players;
 
 
