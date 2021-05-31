@@ -19,10 +19,11 @@ public class Player {
     @Column
     private String system;
 
-    @JsonIgnore
+//    @JsonIgnore
     @OneToOne(mappedBy = "player")
     private Stats stats;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "club_id")
     private Club club;
