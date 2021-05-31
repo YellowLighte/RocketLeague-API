@@ -83,6 +83,23 @@ public class Club {
         this.secondaryColor = secondaryColor;
     }
 
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
+
+    public List<Player> getPlayers() {
+        return players;
+    }
+
+    public void setPlayers(List<Player> players) {
+        this.players = players;
+    }
+
     @Override
     public String toString() {
         return "Club{" +
@@ -91,6 +108,8 @@ public class Club {
                 ", captain='" + captain + '\'' +
                 ", primaryColor='" + primaryColor + '\'' +
                 ", secondaryColor='" + secondaryColor + '\'' +
+                ", users=" + users +
+                ", players=" + players +
                 '}';
     }
 }

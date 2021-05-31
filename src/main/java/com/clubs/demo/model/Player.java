@@ -60,12 +60,30 @@ public class Player {
         this.system = system;
     }
 
+    public Stats getStats() {
+        return stats;
+    }
+
+    public void setStats(Stats stats) {
+        this.stats = stats;
+    }
+
+    public Club getClub() {
+        return club;
+    }
+
+    public void setClub(Club club) {
+        this.club = club;
+    }
+
     @Override
     public String toString() {
         return "Player{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", system='" + system + '\'' +
+                ", stats=" + stats +
+                ", club=" + club +
                 '}';
     }
 }

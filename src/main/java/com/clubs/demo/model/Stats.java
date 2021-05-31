@@ -70,6 +70,14 @@ public class Stats {
         this.assists = assists;
     }
 
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
     @Override
     public String toString() {
         return "Stats{" +
@@ -77,6 +85,7 @@ public class Stats {
                 ", saves=" + saves +
                 ", goals=" + goals +
                 ", assists=" + assists +
+                ", player=" + player +
                 '}';
     }
 }

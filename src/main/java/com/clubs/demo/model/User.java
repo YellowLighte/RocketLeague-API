@@ -57,11 +57,21 @@ public class User {
         this.password = password;
     }
 
+    public Club getClub() {
+        return club;
+    }
+
+    public void setClub(Club club) {
+        this.club = club;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", club=" + club +
                 '}';
     }
 }
