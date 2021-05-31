@@ -20,6 +20,10 @@ public class User {
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
+    @ManyToOne
+    @JoinColumn(name = "club_id")
+    private Club club;
+
     public User(Long id, String userName, String password) {
         this.id = id;
         this.userName = userName;

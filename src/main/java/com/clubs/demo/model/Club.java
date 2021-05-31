@@ -1,6 +1,7 @@
 package com.clubs.demo.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "clubs")
@@ -22,6 +23,12 @@ public class Club {
 
     @Column
     private String secondaryColor;
+
+    @OneToMany(mappedBy = "club_users")
+    private List<User> users;
+
+    @OneToMany(mappedBy = "club_players")
+    private List<Player> players;
 
 
     public Club(Long id, String name, String captain, String primaryColor, String secondaryColor) {

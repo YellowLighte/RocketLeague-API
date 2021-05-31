@@ -1,5 +1,7 @@
 package com.clubs.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -16,6 +18,14 @@ public class Player {
 
     @Column
     private String system;
+
+    @JsonIgnore
+    @OneToOne(mappedBy = "player_stats")
+    private Stats stats;
+
+    @ManyToOne
+    @JoinColumn(name = "club_id")
+    private Club club;
 
     public Player(Long id, String name, String system) {
         this.id = id;
